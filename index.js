@@ -67,26 +67,53 @@ function stressTest(num, diceNum, critRange){
     return result;
 }
 
-function getRepulsionTest(lvl, critRange){
-    return (getDcTest(getRndArray(1), critRange)) + lvl*2;
+function getRepulsionTest(lvl){
+
+    if (lvl < 1 || lvl > 5){
+        console.log("ERROR - IMPOSSIBLE LVL - REPULSION FIELD");
+        return;
+    }
+
+    const arr = getRndArray(1);
+    console.log("Repulsion Field (LvL: " + lvl + "):\n" + arr); // D10s
+    return arr[0] + (lvl * 2);
 }
 
-function getGravityTest(lvl, critRange){
-    return getDcTest(getRndArray(lvl), critRange);
+function getGravityTest(lvl){
+
+    if (lvl < 1 || lvl > 3){
+        console.log("ERROR - IMPOSSIBLE LVL - GRAVITY GUARD");
+        return;
+    }
+
+    const arr = getRndArray(lvl);
+    console.log("Gravity Guard (LvL: " + lvl + "):\n" + arr); // D10s
+    return arr.reduce((a, b) => a + b, 0);
 }
 
-document.querySelector('.botao1').addEventListener('click', function() {
+const botao1 = document.querySelector('.botao1');
+const high = document.querySelector('.high');
+const low = document.querySelector('.low')
+const avg = document.querySelector('.avg');
+
+const botao2 = document.querySelector('.botao2');
+const armor = document.querySelector('.armor');
+const repulsion = document.querySelector('.repulsion');
+const gravity = document.querySelector('.gravity');
+
+(botao1 === null) ? null : botao1.addEventListener('click', function() {
     //arr = getRndArray(10)
     //num = getDcTest(arr, 7)
     //document.querySelector('.arr').textContent = arr
-    test = stressTest(10000, 7, 7);
-    document.querySelector('.high').textContent = "High: " + test[0];
-    document.querySelector('.low').textContent = "Low: " + test[1];
-    document.querySelector('.avg').textContent = "Avg: " + test[2];
+    let test = stressTest(10000, 7, 7);
+
+    (high === null) ? null : high.textContent = "High: " + test[0];
+    (low === null) ? null : low.textContent = "Low: " + test[1];
+    (avg === null) ? null : avg.textContent = "Avg: " + test[2];
 });
 
-document.querySelector('.botao2').addEventListener('click', function() {
-    document.querySelector('.armor').textContent = "Armor: " + 8;
-    document.querySelector('.repulsion').textContent = "Repulsion: " + getRepulsionTest(1, 10);
-    document.querySelector('.gravity').textContent = "Gravity: " + getGravityTest(2, 10);
+(botao2 === null) ? null : botao2.addEventListener('click', function() {
+    (armor === null) ? null : armor.textContent = "Armor: " + 8;
+    (repulsion === null) ? null : repulsion.textContent = "Repulsion: " + getRepulsionTest(5);
+    (gravity === null) ? null : gravity.textContent = "Gravity: " + getGravityTest(3);
 });
