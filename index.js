@@ -1,3 +1,5 @@
+import hello_world from "./test.js";
+
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 };
@@ -43,7 +45,7 @@ function getDcTest(arr, critRange){
     res += arrCopy[0];
 
     return res;
-}
+};
 
 function stressTest(num, diceNum, critRange){
     let res = 0;
@@ -65,7 +67,7 @@ function stressTest(num, diceNum, critRange){
     const result = [high, low, avg/num];
 
     return result;
-}
+};
 
 function getRepulsionTest(lvl){
 
@@ -77,7 +79,7 @@ function getRepulsionTest(lvl){
     const arr = getRndArray(1);
     console.log("Repulsion Field (LvL: " + lvl + "):\n" + arr); // D10s
     return arr[0] + (lvl * 2);
-}
+};
 
 function getGravityTest(lvl){
 
@@ -89,7 +91,7 @@ function getGravityTest(lvl){
     const arr = getRndArray(lvl);
     console.log("Gravity Guard (LvL: " + lvl + "):\n" + arr); // D10s
     return arr.reduce((a, b) => a + b, 0);
-}
+};
 
 const botao1 = document.querySelector('.botao1');
 const high = document.querySelector('.high');
@@ -116,4 +118,6 @@ const gravity = document.querySelector('.gravity');
     (armor === null) ? null : armor.textContent = "Armor: " + 8;
     (repulsion === null) ? null : repulsion.textContent = "Repulsion: " + getRepulsionTest(5);
     (gravity === null) ? null : gravity.textContent = "Gravity: " + getGravityTest(3);
+    hello_world.hello_world();
+    hello_world.hello_world2();
 });
