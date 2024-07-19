@@ -12,9 +12,9 @@ const spaceCompression = {
     encroach: 2,
     restrict: "-",
     lvl: 0,
-    affects : ["Move.Multi"],
+    affects : ["Move.Num"],
     res(){
-        return [2]
+        return [1]
     },
     description(){
         return `The Target may perform a Move. How and where he Moves is up to him. This Power can only be used on characters that agree to be targeted. This Power may be used (${this.lvl}) times per Scenario.`
@@ -37,9 +37,9 @@ const repulsionJump = {
     encroach: 1,
     restrict: "-",
     lvl: 0,
-    affects : ["Move"],
+    affects : ["Move", "Move.Num"],
     res(){
-        return [this.lvl * 5]
+        return [this.lvl * 5, 1]
     },
     description(){
         return `The User temporarily gains Flight and performs a Move. For this Move, the User may travel an extra [${this.lvl} X 5] meters.`
@@ -397,7 +397,7 @@ const gravitySwamp = {
         return [1]
     },
     description(){
-        return `For the duration of the Round, Reaction checks against the User's MajorActions will receive a +i Critical Value penalty. Only characters that are in the User's Engagement are subject to this penalty. This Power maybe used (${this.lvl}) times per Scenario.`
+        return `For the duration of the Round, Reaction checks against the User's MajorActions will receive a +1 Critical Value penalty. Only characters that are in the User's Engagement are subject to this penalty. This Power maybe used (${this.lvl}) times per Scenario.`
     }
 };
 
@@ -542,7 +542,7 @@ const staticSpace = {
     encroach: 2,
     restrict: "-",
     lvl: 0,
-    affects : ["Initiative.Enemy.Multi", "Atk.Power.Multi"],
+    affects : ["Initiative.Multi.Enemy", "Atk.Power.Multi"],
     res(){
         return [0, 0]
     },

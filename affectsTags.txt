@@ -1,0 +1,30 @@
+Move                   - Metros extra q se movimenta
+Move.Enemy             - Metros que o inimigo se movimenta
+Move.Num               - Vezes que se movimenta num round
+Move.Multi             - Multiplicador de movimento
+Move.Multi.Enemy       - Multiplicador de movimento do inimigo
+
+Initiative             - Bonus de Iniciativa
+Initiative.Enemy       - Bonus de Iniciativa do inimigo
+Initiative.Multi.Enemy - Multiplicador de Iniciativa do inimigo
+
+Atk.Power              - Bonus de dano
+Atk.Power.Dice         - Bonus de dado de dano
+Atk.Power.Multi        - Multiplicador de dano
+
+Accuracy               - Bonus de acerto
+Accuracy.Dice          - Bonus de dados de acerto
+
+Area                   - Muda a area de um ataque
+Area.Enemy             - Muda a area de um ataque do inimigo
+
+Reaction.Dice.Enemy    - Bonus de dados de reação do inimigo
+Reaction.Crit.Enemy    - Bonus de critico de reação do inimigo
+
+Bad.Status.Enemy       - Aplica um Bad Status no inimigo
+Bad.Status.Remove      - Remove um Bad Status
+
+HP.Damage              - Aplica dano no HP
+HP.Negation            - Nega dano no HP
+
+Guard                  - Bonus de Guard
