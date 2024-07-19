@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centraliza verticalmente */
+}
+
+.container {
+    background-color: #fff; /* Cor de fundo branca para o contêiner */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    width: 300px; /* Largura fixa */
+    text-align: center;
+}
+
+.container > div {
+    margin-bottom: 10px; /* Espaçamento entre elementos */
+    padding: 8px 0;
+    font-size: 16px; /* Tamanho da fonte */
+    border-bottom: 1px solid #ddd; /* Linha inferior */
+}
+
+.container > div:last-child {
+    border-bottom: none; /* Remove a linha inferior do último elemento */
+}
+
+.button {
+    background-color: #3498db; /* Azul suave */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 14px; /* Tamanho da fonte dos botões */
+}
+
+.button:hover {
+    background-color: #2980b9; /* Cor mais escura ao passar o mouse */
+}
+
+.botao1, .botao2 {
+    margin-bottom: 10px; /* Espaçamento abaixo dos botões */
+    display: block;
+    width: 100%; /* Faz com que o botão ocupe toda a largura */
+}
+
+.high, .low, .avg, .armor, .repulsion, .gravity {
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
