@@ -23,7 +23,8 @@ const gravity = document.querySelector('.gravity');
 });
 
 (botao2 === null) ? null : botao2.addEventListener('click', function() {
-    (armor === null) ? null : armor.textContent = "Armor: " + 8;
-    (repulsion === null) ? null : repulsion.textContent = "Repulsion: " + balor.getRepulsionTest(5);
-    (gravity === null) ? null : gravity.textContent = "Gravity: " + balor.getGravityTest(3);
+    //(armor === null) ? null : armor.textContent = "Armor: " + 8;
+    (repulsion === null) ? null : repulsion.textContent = "Repulsion: " + balor.getRepulsionField().description();
+    //(gravity === null) ? null : gravity.textContent = "Gravity: " + balor.getGravityGuard().description();
+    //balor.getSpaceCompression();
 });
