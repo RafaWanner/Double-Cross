@@ -45,6 +45,14 @@ function getDcTest(arr, critRange){
     return res;
 };
 
+function setPowerLvl(power, lvl){
+    if (lvl < 0 || lvl > power.maxLvl){
+        console.log(`IMPOSSIBLE LVL - ${power.name}`);
+    } else {
+        power.lvl = lvl;
+    }
+};
+
 function stressTest(num, diceNum, critRange){
     let res = 0;
     let avg = 0;
@@ -67,4 +75,10 @@ function stressTest(num, diceNum, critRange){
     return result;
 };
 
-export default {getRndInteger, getRndArray, getDcTest, stressTest};
+export default {
+    getRndInteger, 
+    getRndArray, 
+    getDcTest, 
+    setPowerLvl, 
+    stressTest
+};
