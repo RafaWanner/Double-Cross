@@ -27,7 +27,7 @@ const gravity = document.querySelector('.gravity');
 (botao2 === null) ? null : botao2.addEventListener('click', function() {
     defaults.setPowerLvl(balor.getRepulsionField() ,person.powers.repulsionField);
     //(armor === null) ? null : armor.textContent = "Armor: " + 8;
-    (repulsion === null) ? null : repulsion.textContent = "Repulsion: " + balor.getRepulsionField().description();
+    (repulsion === null) ? null : repulsion.textContent = "Repulsion: " + balor.getGravityGuard().res()[0];
     //(gravity === null) ? null : gravity.textContent = "Gravity: " + balor.getGravityGuard().description();
     //balor.getSpaceCompression();
     //console.log(char());
