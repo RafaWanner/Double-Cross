@@ -1,5 +1,6 @@
 import defaults from "./defaults.js";
 import balor from "./balor.js";
+import char from "./char.js"
 
 const botao1 = document.querySelector('.botao1');
 const high = document.querySelector('.high');
@@ -23,8 +24,10 @@ const gravity = document.querySelector('.gravity');
 });
 
 (botao2 === null) ? null : botao2.addEventListener('click', function() {
+    balor.getRepulsionField().lvl = char()[0].powers.repulsionField;
     //(armor === null) ? null : armor.textContent = "Armor: " + 8;
     (repulsion === null) ? null : repulsion.textContent = "Repulsion: " + balor.getRepulsionField().description();
     //(gravity === null) ? null : gravity.textContent = "Gravity: " + balor.getGravityGuard().description();
     //balor.getSpaceCompression();
+    //console.log(char());
 });

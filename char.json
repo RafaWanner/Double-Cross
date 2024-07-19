@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Danilo",
+        "age": 19,
+        "powers": {
+            "repulsionField" : 2
+        }
+    }
+]
