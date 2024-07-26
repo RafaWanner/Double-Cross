@@ -1,4 +1,4 @@
-import defaults from "./defaults.js";
+import defaults from "../components/defaults.js";
 
 const spaceCompression = {
     name: "Space Compression",
