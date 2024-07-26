@@ -1,58 +1,50 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8; /* Cor de fundo suave */
-    color: #333; /* Cor do texto */
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Centraliza verticalmente */
+    background-color: #f0f0f0;
+}
+
+h1, h2 {
+    text-align: center; /* Centraliza o texto dos títulos */
+    margin: 20px 0; /* Espaçamento acima e abaixo dos títulos */
 }
 
 .container {
-    background-color: #fff; /* Cor de fundo branca para o contêiner */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 1400px; /* Define uma largura máxima para o contêiner principal */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 0 20px; /* Adiciona um pouco de padding lateral */
+}
+
+.object-container {
+    display: grid; /* Usa o Grid Layout para organizar os itens */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta o número de colunas baseado no tamanho do item e do contêiner */
+    gap: 10px; /* Espaço entre os itens */
+    margin-bottom: 20px; /* Espaçamento inferior para separar do texto da descrição */
+}
+
+.object-details {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px; /* Largura fixa */
-    text-align: center;
+    box-sizing: border-box; /* Inclui o padding e a borda na largura total da caixa */
+    width: 100%; /* Faz com que a largura da caixa seja igual à largura da coluna */
+    min-height: 250px; /* Define uma altura mínima para as caixas */
 }
 
-.container > div {
-    margin-bottom: 10px; /* Espaçamento entre elementos */
-    padding: 8px 0;
-    font-size: 16px; /* Tamanho da fonte */
-    border-bottom: 1px solid #ddd; /* Linha inferior */
+.object-details-grid {
+    display: grid; /* Usa o Grid Layout para organizar os itens */
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Ajusta o número de colunas baseado no tamanho do item e do contêiner */
+    gap: 10px; /* Espaço entre os itens */
+    margin-bottom: 20px; /* Espaçamento inferior para separar do texto da descrição */
 }
 
-.container > div:last-child {
-    border-bottom: none; /* Remove a linha inferior do último elemento */
+.object-details-grid p {
+    margin: 0; /* Remove margens adicionais dos parágrafos */
 }
 
-.button {
-    background-color: #3498db; /* Azul suave */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-size: 14px; /* Tamanho da fonte dos botões */
+.description {
+    text-align: justify; /* Justifica o texto da descrição */
 }
-
-.button:hover {
-    background-color: #2980b9; /* Cor mais escura ao passar o mouse */
-}
-
-.botao1, .botao2 {
-    margin-bottom: 10px; /* Espaçamento abaixo dos botões */
-    display: block;
-    width: 100%; /* Faz com que o botão ocupe toda a largura */
-}
-
-.high, .low, .avg, .armor, .repulsion, .gravity {
-    font-weight: bold; /* Deixa o texto em negrito */
-}
-
