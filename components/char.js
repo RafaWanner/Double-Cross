@@ -1,4 +1,4 @@
-import data from './char.json' with { type: 'json' };
+//import data from './char.json' with { type: 'json' };
 
 // "with" only works with newest versions of node
 // use assert instead 
@@ -7,6 +7,9 @@ import data from './char.json' with { type: 'json' };
 // Firefox apparently does not support "assert"
 
 // Adiciona um poder ao objeto `powers`
+
+//function getChar(){return data}
+
 function addPower(myData, powerName, powerLevel) {
     if (!myData || !myData.powers) {
         console.error('Dados do personagem não encontrados.');
@@ -36,6 +39,36 @@ function removePower(myData, powerName) {
     }
 }
 
-function getChar(){return data}
+function saveData(data) {
+    
+    // Convertemos o objeto em uma string JSON
+    const dataString = JSON.stringify(data);
 
-export default {getChar, addPower, removePower};
+    // Salvamos a string JSON no localStorage
+    localStorage.setItem('userData', dataString);
+}
+
+function loadData() {
+    // Pegamos a string JSON do localStorage
+    const dataString = localStorage.getItem('userData');
+   
+    if (dataString) {
+        // Convertendo a string JSON de volta para um objeto
+        const data = JSON.parse(dataString);
+        return data;
+    } else {
+        // Se não houver dados no localStorage
+        console.log('Nenhum dado encontrado, Criando um novo...');
+        const newChar = {
+            "name": "Danilo",
+            "age": 19,
+            "powers": {
+                "repulsionField": 2,
+                "getDarkSpiral": 1
+            }
+        };
+        return newChar;
+    }
+}
+
+export default {addPower, removePower, saveData, loadData};

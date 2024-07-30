@@ -1,6 +1,7 @@
 import Balor from "./syndromes/balor.js";
 import { objectToHTML } from "./components/objectToHTML.js";
 import Char from "./components/char.js";
+import char from "./components/char.js";
 
 const objectContainer = document.getElementById('objectContainer');
 
@@ -22,12 +23,15 @@ function AllPowersToHTML(module) {
 
 }
 
-let myData = Char.getChar()
+let myData = Char.loadData();
 
 console.log(myData)
-Char.addPower(myData, Balor.getBlackHammer().name, 1);
+
+//Char.addPower(myData, Balor.getDarkSpiral.name, 1);
 
 console.log(myData)
+
+Char.saveData(myData)
 
 objectContainer.appendChild(AllPowersToHTML(Balor));
 
