@@ -2,6 +2,8 @@ import Balor from "./syndromes/balor.js";
 import { objectToHTML } from "./components/objectToHTML.js";
 import Char from "./components/char.js";
 
+let myData = Char.loadData();
+// todo: Criar um botao para adicionar/remover um poder pro char
 
 const objectContainer = document.getElementById('objectContainer');
 
@@ -22,16 +24,6 @@ function AllPowersToHTML(module) {
     return fragment; // Retorna o fragmento de documento
 
 }
-
-let myData = Char.loadData();
-
-console.log(myData)
-
-//Char.addPower(myData, Balor.getDarkSpiral.name, 1);
-
-console.log(myData)
-
-Char.saveData(myData)
 
 objectContainer.appendChild(AllPowersToHTML(Balor));
 
