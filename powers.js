@@ -1,7 +1,7 @@
 import Balor from "./syndromes/balor.js";
 import { objectToHTML } from "./components/objectToHTML.js";
 import Char from "./components/char.js";
-import char from "./components/char.js";
+
 
 const objectContainer = document.getElementById('objectContainer');
 
