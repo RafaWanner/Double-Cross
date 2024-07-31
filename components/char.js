@@ -60,11 +60,10 @@ function loadData() {
         // Se não houver dados no localStorage
         console.log('Nenhum dado encontrado, Criando um novo...');
         const newChar = {
-            "name": "Danilo",
-            "age": 19,
+            "name": "Me",
+            "age": 99,
             "powers": {
-                "repulsionField": 2,
-                "getDarkSpiral": 1
+                
             }
         };
         return newChar;

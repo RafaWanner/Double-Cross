@@ -26,5 +26,3 @@ function AllPowersToHTML(module) {
 }
 
 objectContainer.appendChild(AllPowersToHTML(Balor));
-
-
