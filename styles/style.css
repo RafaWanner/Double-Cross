@@ -76,3 +76,14 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
+.input-container {
+    display: flex;
+    justify-content: center;
+}
+
+.input-text, .output-text {
+    display:inline-block;
+    min-height: 500px;
+    min-width:  500px;
+}
