@@ -25,4 +25,4 @@ function AllPowersToHTML(module) {
 
 }
 
-objectContainer.appendChild(AllPowersToHTML(Balor));
+(objectContainer === null) ? null : objectContainer.appendChild(AllPowersToHTML(Balor));

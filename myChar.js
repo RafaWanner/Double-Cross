@@ -24,4 +24,4 @@ charDiv.innerHTML = `
 `;
 
 // Adiciona o elemento ao contêiner
-objectContainer.appendChild(charDiv);
+(objectContainer === null) ? null : objectContainer.appendChild(charDiv);
