@@ -43,3 +43,22 @@ const outputText = document.querySelector('.output-text');
 (buttonSubmit === null) ? null : buttonSubmit.addEventListener('click', function() {
     (outputText === null) ? null : outputText.textContent = identation(inputText);
 });
+
+import defaults from "./components/defaults.js";
+import char from "./components/char.js";
+
+const botao1 = document.querySelector('.botao1');
+const high = document.querySelector('.high');
+const low = document.querySelector('.low')
+const avg = document.querySelector('.avg');
+
+(botao1 === null) ? null : botao1.addEventListener('click', function() {
+    //arr = getRndArray(10)
+    //num = getDcTest(arr, 7)
+    //document.querySelector('.arr').textContent = arr
+    let test = defaults.stressTest(100000, 6, 7);
+
+    (high === null) ? null : high.textContent = "High: " + test[0];
+    (low === null) ? null : low.textContent = "Low: " + test[1];
+    (avg === null) ? null : avg.textContent = "Avg: " + test[2];
+});
