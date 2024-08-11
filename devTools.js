@@ -45,18 +45,25 @@ const outputText = document.querySelector('.output-text');
 });
 
 import defaults from "./components/defaults.js";
-import char from "./components/char.js";
 
-const botao1 = document.querySelector('.botao1');
+const stressTest = document.querySelector('.stress-test');
 const high = document.querySelector('.high');
 const low = document.querySelector('.low')
 const avg = document.querySelector('.avg');
 
-(botao1 === null) ? null : botao1.addEventListener('click', function() {
-    //arr = getRndArray(10)
-    //num = getDcTest(arr, 7)
-    //document.querySelector('.arr').textContent = arr
-    let test = defaults.stressTest(100000, 6, 7);
+var numTries = document.getElementById('num-tries');
+var numDice = document.getElementById('num-dice');
+var critRange = document.getElementById('crit-range');
+
+function stressTest2(tries, dice, crit) {
+    (tries.value === '') ? tries.value = 10000 : null;
+    (dice.value === '') ? dice.value = 1 : null;
+    (crit.value === '') ? crit.value = 10 : null;
+    return defaults.stressTest(tries.value, dice.value, crit.value);
+}
+
+(stressTest === null) ? null : stressTest.addEventListener('click', function() {
+    let test = stressTest2(numTries, numDice, critRange);
 
     (high === null) ? null : high.textContent = "High: " + test[0];
     (low === null) ? null : low.textContent = "Low: " + test[1];

@@ -18,20 +18,40 @@
                         </ul>
                 </nav>
         </header>
-
+        
         <h1>Dev Tools</h1>
+        
+        <h2>Dice Stress Test:</h2>
+        <div class="container">
+                <label for="num-tries">Number of Tries:</label>
+                <input type="number" id="num-tries" placeholder=10000>
+                <br>
+                <br>
+                <label for="num-dice">Number of Dice:</label>
+                <input type="number" id="num-dice" placeholder=1>
+                <br>
+                <br>
+                <label for="crit-range">Crit Range:</label>
+                <input type="number" id="crit-range" placeholder=10>
+                <br>
+                <br>
+                <div class="high">High:</div>
+                <br>
+                <div class="low">Low:</div>
+                <br>
+                <div class="avg">Avg:</div>
+                <br>
+                <button class="stress-test">Stress Test</button>
+        </div>
+        
+        <br>
+        <br>
+        
         <h2>Enter your text:</h2>
         <div class="input-container">
                 <textarea id="input-text" class="input-text" type="text" placeholder="Type here..."></textarea>
                 <button class="button-submit">Submit</button>
                 <textarea class="output-text" type="text">Result here...</textarea>
-        </div>
-
-        <div class="container">
-                <div class="high">High:</div>
-                <div class="low">Low:</div>
-                <div class="avg">Avg:</div>
-                <button class="botao1">Botão 1</button>
         </div>
 
         <script type="module" src="devTools.js"></script>
