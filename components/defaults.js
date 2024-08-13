@@ -28,6 +28,7 @@ function getDcTest(arr, critRange){
                 break;
             }
         }
+        
         console.log("Rolagem (" + cont + "):\n" + arrCopy); // Rolagens
         
         if (crit > 0) {
