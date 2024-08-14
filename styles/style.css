@@ -87,3 +87,7 @@ nav ul li a:hover {
     min-height: 500px;
     min-width:  500px;
 }
+
+.dice strong {
+    color: rgb(3, 182, 3);
+}
